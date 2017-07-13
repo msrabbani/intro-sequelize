@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Subjects</title>
+  </head>
+  <!-- <link rel="stylesheet" href="/style.css"> -->
+  <!-- <link rel="stylesheet" href="/sesuatu.css"> -->
+  <body>
+    <center>
+    <h1>Teacher</h1>
+    <table border="1" style="width:50%">
+      <tr>
+        <th>No.id</th>
+        <th>Subject</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+      <%var i = 1%>
+      <%dataS.forEach(function(isi){ %>
+      <tr>
+        <td><%=isi.id%></td>
+        <td><%=isi.subject_name%></td>
+        <td> <a href="/subjects/edit/<%= isi.id%>">Edit</a> </td>
+        <td> <a href="/subjects/delete/<%= isi.id%>">Delete</a> </td>
+      </tr>
+    <%})%>
+    </table>
+    <br><br>
+
+    <!-- <form action="/teachers" method="post">
+
+  Name :<br>
+  <input type="text" name="first_" value="">
+  <br>
+
+  Company :<br>
+  <input type="text" name="company" value="">
+  <br>
+
+  Telephone Number :<br>
+  <input type="text" name="telepon_number" value="">
+  <br>
+
+  Email :<br>
+  <input type="text" name="email" value="">
+  <br>
+
+  <br>
+  <input type="submit" value="Submit">
+</form> -->
+<br><br>
+<a href="/"><b>Home</b></a>
+
+</center>
+
+  </body>
+</html>
