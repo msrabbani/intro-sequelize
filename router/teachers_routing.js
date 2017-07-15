@@ -3,10 +3,13 @@ var router = express.Router()
 let modelTeacher = require('../models');
 
 router.get('/', function(req, res){
-  modelTeacher.Teacher.findAll().then(teacher => {
-    res.render('teachers',{dataT:teacher})
-    })
+  modelTeacher.Teacher.findAll({
+    include:[modelTeacher.Subject]
   })
+  .then(teacher => {
+    res.render('teachers',{dataT:teacher})
+  })
+})
 
     router.get('/add_teachers', function(req, res){
       res.render('teachers_add')

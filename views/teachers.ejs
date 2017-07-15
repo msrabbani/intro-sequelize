@@ -16,6 +16,7 @@
         <th>Firstname</th>
         <th>Lastname</th>
         <th>Email</th>
+        <th>Subject</th>
         <th>Edit</th>
         <th>Delete</th>
       </tr>
@@ -26,6 +27,11 @@
         <td><%=isi.first_name%></td>
         <td><%=isi.last_name%></td>
         <td><%=isi.email%></td>
+        <% if(isi.SubjectId == undefined) { %>
+          <td>unsassigned</td>
+          <% } else { %>
+            <td><%=isi.Subject.subject_name%></td>
+            <% } %>
         <td> <a href="/teachers/edit/<%= isi.id%>">Edit</a> </td>
         <td> <a href="/teachers/delete/<%= isi.id%>">Delete</a> </td>
       </tr>
