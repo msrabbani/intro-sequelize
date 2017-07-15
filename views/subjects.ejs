@@ -9,20 +9,20 @@
   <body>
     <center>
     <h1>Teacher</h1>
-    <table border="1" style="width:50%">
+    <table border="1" style="width:20%">
       <tr>
         <th>No.id</th>
         <th>Subject</th>
-        <th>Edit</th>
-        <th>Delete</th>
+        <!-- <th>Edit</th>
+        <th>Delete</th> -->
       </tr>
       <%var i = 1%>
       <%dataS.forEach(function(isi){ %>
       <tr>
         <td><%=isi.id%></td>
         <td><%=isi.subject_name%></td>
-        <td> <a href="/subjects/edit/<%= isi.id%>">Edit</a> </td>
-        <td> <a href="/subjects/delete/<%= isi.id%>">Delete</a> </td>
+        <!-- <td> <a href="/subjects/edit/<%= isi.id%>">Edit</a> </td>
+        <td> <a href="/subjects/delete/<%= isi.id%>">Delete</a> </td> -->
       </tr>
     <%})%>
     </table>

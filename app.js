@@ -6,14 +6,24 @@ app.use(bodyParser.urlencoded({ extended : false}))
 app.use(bodyParser.json())
 app.set('view engine','ejs')
 
+//================================================================
+
 let teachersRoot = require("./router/teachers_routing");
 let teachersModel = require("./models/teacher")
 
 let subjectsRoot = require("./router/subjects_routing");
 let subjectsModel = require("./models/subject")
 
+let studentsRoot = require("./router/students_routing")
+let studentsModel = require("./models/student")
+
 app.use('/teachers', teachersRoot)
 app.use('/subjects', subjectsRoot)
+app.use('/students', studentsRoot)
+
+//=================================================================
 
 
-app.listen(3000);
+
+
+app.listen(3007);

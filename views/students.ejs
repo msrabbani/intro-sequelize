@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Students</title>
+  </head>
+  <!-- <link rel="stylesheet" href="/style.css"> -->
+  <!-- <link rel="stylesheet" href="/sesuatu.css"> -->
+  <body>
+    <center>
+    <h1>Students Data</h1>
+    <p><a href="/students/add_students">add student</a></p>
+    <table border="1" style="width:50%">
+      <tr>
+        <th>No.id</th>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+        <th>Jurusan</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+      <%var i = 1%>
+      <%dataS.forEach(function(isi){ %>
+      <tr>
+        <td><%=isi.id%></td>
+        <td><%=isi.first_name%></td>
+        <td><%=isi.last_name%></td>
+        <td><%=isi.email%></td>
+        <td><%=isi.jurusan%></td>
+        <td> <a href="/students/edit/<%= isi.id%>">Edit</a> </td>
+        <td> <a href="/students/delete/<%= isi.id%>">Delete</a> </td>
+      </tr>
+    <%})%>
+    </table>
+    <br><br>
+
+<br><br>
+<a href="/"><b>Home</b></a>
+
+</center>
+
+  </body>
+</html>
