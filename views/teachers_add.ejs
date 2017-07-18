@@ -24,10 +24,17 @@
 
   Email :<br>
   <input type="text" name="email" value="">
-  <br>
+  <br><br>
 
-  <br>
-  <input type="submit" value="Add Student">
+  <select name="dropDown">
+    <option value="">Choose your subject</option>
+    <%data_sub.forEach(subject => { %>
+    <option value="<%= subject.id %>"><%=subject.subject_name%></option>
+  <% }) %>
+  </select>
+
+  <br><br>
+  <input type="submit" value="Add Teacher">
 
 </form>
 <br><br>

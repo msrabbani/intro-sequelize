@@ -13,24 +13,30 @@
       <a href="#">show all data</a>
       <br><br>
 
-        <form action="/teachers/edit/<%=editT.id%>" method="post">
-              <!-- <%JSON.stringify(editT)%> -->
+        <form action="/teachers/edit/<%=data_teach.id%>" method="post">
           First Name :<br>
-          <input type="text" name="first_name" value="<%=editT.first_name%>">
+          <input type="text" name="first_name" value="<%=data_teach.first_name%>">
           <br>
 
           Last Name :<br>
-          <input type="text" name="last_name" value="<%=editT.last_name%>">
+          <input type="text" name="last_name" value="<%=data_teach.last_name%>">
           <br>
 
           Email :<br>
-          <input type="text" name="email" value="<%=editT.email%>">
-          <br>
+          <input type="text" name="email" value="<%=data_teach.email%>">
+          <br><br>
 
-          <br>
+          <select name="dropDown">
+          <%data_sub.forEach(subject => {%>
+          <option value="<%= subject.id %>"><%=subject.subject_name%></option>
+          <% }) %>
+          </select>
+
+          <br><br>
           <input type="submit" value="Edit Teacher">
 
         </form>
+
 <br>
 <!-- <a href="/"><b>Home</b></a> -->
 </center>

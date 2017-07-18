@@ -16,18 +16,18 @@
         <th>Firstname</th>
         <th>Lastname</th>
         <th>Email</th>
-        <th>Jurusan</th>
+        <th>Actions</th>
         <th>Edit</th>
         <th>Delete</th>
       </tr>
       <%var i = 1%>
-      <%dataS.forEach(function(isi){ %>
+      <%dataS.forEach(function(isi, number){ %>
       <tr>
-        <td><%=isi.id%></td>
+        <td><%=number+1%></td>
         <td><%=isi.first_name%></td>
         <td><%=isi.last_name%></td>
         <td><%=isi.email%></td>
-        <td><%=isi.jurusan%></td>
+        <td><a href="/students/<%=isi.Actions%>/addsubject">Add Subject</a></td>
         <td> <a href="/students/edit/<%= isi.id%>">Edit</a> </td>
         <td> <a href="/students/delete/<%= isi.id%>">Delete</a> </td>
       </tr>

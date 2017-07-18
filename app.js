@@ -7,6 +7,7 @@ app.use(bodyParser.json())
 app.set('view engine','ejs')
 
 //================================================================
+let indexRoot = require("./router/index_routing");
 
 let teachersRoot = require("./router/teachers_routing");
 let teachersModel = require("./models/teacher")
@@ -17,10 +18,11 @@ let subjectsModel = require("./models/subject")
 let studentsRoot = require("./router/students_routing")
 let studentsModel = require("./models/student")
 
+app.use('/', indexRoot)
 app.use('/teachers', teachersRoot)
 app.use('/subjects', subjectsRoot)
 app.use('/students', studentsRoot)
 
 //=================================================================
 
-app.listen(3007);
+app.listen(3030);
