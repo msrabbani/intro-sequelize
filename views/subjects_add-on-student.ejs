@@ -20,11 +20,10 @@
 
         <td><%=isi.id%></td>
         <td><%=isi.subject_name%></td>
-        <td> <ol>
-          <% for (var i=0; i<isi.Teachers.length; i++){ %>
-            <li><%= isi.Teachers[i].first_name%></li>
+        <td>
+          <% for (var i=0; i<dataST.length; i++){ %>
+            <%= JSON.stringify(dataST[i].Teachers[1].first_name)%>
           <%}%>
-            </ol>
 
 
         </td>

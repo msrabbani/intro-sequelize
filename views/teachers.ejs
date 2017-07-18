@@ -12,20 +12,26 @@
     <p><a href="/teachers/add_teachers">add teachers</a></p>
     <table border="1" style="width:50%">
       <tr>
-        <th>No.id</th>
+        <th>No</th>
         <th>Firstname</th>
         <th>Lastname</th>
         <th>Email</th>
+        <th>Subject</th>
         <th>Edit</th>
         <th>Delete</th>
       </tr>
       <%var i = 1%>
-      <%dataT.forEach(function(isi){ %>
+      <%dataT.forEach(function(isi,number){ %>
       <tr>
-        <td><%=isi.id%></td>
+        <td><%=number+1%></td>
         <td><%=isi.first_name%></td>
         <td><%=isi.last_name%></td>
         <td><%=isi.email%></td>
+        <% if(isi.SubjectId === undefined) { %>
+          <td>bapak teu acan milih</td>
+          <% } else { %>
+            <td><%=isi.Subject.subject_name%></td>
+            <% } %>
         <td> <a href="/teachers/edit/<%= isi.id%>">Edit</a> </td>
         <td> <a href="/teachers/delete/<%= isi.id%>">Delete</a> </td>
       </tr>

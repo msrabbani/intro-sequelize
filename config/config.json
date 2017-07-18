@@ -4,20 +4,10 @@
     "password": "d4m4l14",
     "database": "data_db",
     "host": "localhost",
-    "dialect": "postgres"
-  },
-  "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "postgres",
+    "port": "5432"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "use_env_variable":"DATABASE_URL"
   }
 }
